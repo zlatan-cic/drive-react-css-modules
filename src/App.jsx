@@ -1,17 +1,16 @@
-import Hero from './components/hero/Hero'
-import NavBar from './components/navbar/NavBar'
-
+import React from "react";
+import NavBar from "./components/navbar/NavBar";
+import Hero from "./components/hero/Hero";
+import Find from "./components/find/Find";
 
 function App() {
-
   return (
-
-    <div className=''>
+    <div className="">
       <NavBar />
-      <Hero/>
+      <Hero />
+      <Find />
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
