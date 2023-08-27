@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Find.module.css";
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -10,6 +10,9 @@ import "swiper/css/navigation";
 import Card from "./Card";
 
 const Find = () => {
+
+  
+
   return (
     <div className={styles.find}>
       <div className={styles.heading}>
@@ -22,7 +25,7 @@ const Find = () => {
       </div>
       <div className={styles.slider_container}>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
           slidesPerView={5}
           navigation
@@ -43,8 +46,13 @@ const Find = () => {
               slidesPerView: 5,
             },
           }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          loop={true} // Enables infinite loop
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <Card
