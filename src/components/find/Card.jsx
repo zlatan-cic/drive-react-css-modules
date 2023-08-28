@@ -7,7 +7,7 @@ const Card = ({ image, make}) => {
   return (
     <div className={styles.card}>
       <img src={image} alt="/" />
-      <p>{make}</p>
+      <p className={styles.content}>{make}</p>
     </div>
   );
 };
